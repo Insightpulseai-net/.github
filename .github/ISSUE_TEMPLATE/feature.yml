@@ -1,0 +1,84 @@
+name: ✨ Feature
+description: New capability or enhancement
+title: "[FEATURE] "
+labels: ["type:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## New Feature Request
+        Use this template for sprint-level features that belong in the **⚙️ Execution Board**.
+
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      description: Which technology domain?
+      options:
+        - Finance SSC
+        - Odoo Platform
+        - BI Analytics
+        - AI/ML
+        - Infrastructure
+        - Learning
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this feature?
+      options:
+        - 🔥 Critical
+        - ⚠️ High
+        - 📋 Medium
+        - 📝 Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: What functionality are you requesting?
+      placeholder: "As a [user type], I want [capability] so that [benefit]..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this feature needed? What problem does it solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this feature is complete?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Tests pass
+    validations:
+      required: true
+
+  - type: input
+    id: epic
+    attributes:
+      label: Related Epic
+      description: "If this belongs to an epic, link it (e.g., #123)"
+      placeholder: "#123"
+
+  - type: textarea
+    id: technical
+    attributes:
+      label: Technical Notes
+      description: Any implementation details, constraints, or considerations
+      placeholder: |
+        - Database schema changes needed
+        - API endpoints to create
+        - UI components required

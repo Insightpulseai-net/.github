@@ -1,0 +1,106 @@
+name: 🎯 Epic
+description: Strategic initiative spanning multiple sprints
+title: "[EPIC] "
+labels: ["type:epic", "status:in-roadmap"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Strategic Initiative
+        Use this template for large, multi-sprint initiatives that belong in the **🚀 InsightPulse Roadmap**.
+
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      description: Which technology domain does this epic belong to?
+      options:
+        - Finance SSC
+        - Odoo Platform
+        - BI Analytics
+        - AI/ML
+        - Infrastructure
+        - Learning
+    validations:
+      required: true
+
+  - type: dropdown
+    id: quarter
+    attributes:
+      label: Target Quarter
+      description: When do you plan to complete this epic?
+      options:
+        - Q1 2026
+        - Q2 2026
+        - Q3 2026
+        - Q4 2026
+        - Future
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What business problem does this epic solve?
+      placeholder: "Users currently face... This impacts our ability to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: High-level approach to solving this problem
+      placeholder: "We will build... This will enable..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: success
+    attributes:
+      label: Success Criteria
+      description: How will we know this epic is complete and successful?
+      placeholder: |
+        - Metric 1: ...
+        - Metric 2: ...
+    validations:
+      required: true
+
+  - type: input
+    id: impact
+    attributes:
+      label: Impact Score (1-10)
+      description: Strategic importance (10 = critical to business)
+      placeholder: "8"
+    validations:
+      required: true
+
+  - type: input
+    id: effort
+    attributes:
+      label: Effort Score (1-10)
+      description: Implementation complexity (10 = very complex)
+      placeholder: "6"
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What other epics, teams, or systems does this depend on?
+      placeholder: |
+        - Epic: #123
+        - Team: Finance SSC
+        - External: Supabase migration
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: High-Level Tasks
+      description: Major workstreams (will be broken into issues later)
+      placeholder: |
+        - [ ] Phase 1: Research and design
+        - [ ] Phase 2: Implementation
+        - [ ] Phase 3: Testing and rollout

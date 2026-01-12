@@ -1,0 +1,101 @@
+name: 📋 Spec / PRD
+description: Requirements, design documentation
+title: "[SPEC] "
+labels: ["type:spec", "status:in-roadmap"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Product Requirements Document
+        Use this template for detailed specifications that guide implementation.
+
+  - type: dropdown
+    id: track
+    attributes:
+      label: Track
+      description: Which domain does this spec cover?
+      options:
+        - Finance SSC
+        - Odoo Platform
+        - BI Analytics
+        - AI/ML
+        - Infrastructure
+        - Learning
+    validations:
+      required: true
+
+  - type: input
+    id: epic
+    attributes:
+      label: Related Epic
+      description: "Link to the parent epic (e.g., #123)"
+      placeholder: "#123"
+    validations:
+      required: true
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview
+      description: High-level summary of what this spec covers
+      placeholder: "This spec defines the requirements for..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals & Non-Goals
+      description: What is in scope and what is explicitly out of scope?
+      placeholder: |
+        **Goals:**
+        - Goal 1
+        - Goal 2
+
+        **Non-Goals:**
+        - Out of scope 1
+        - Out of scope 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Functional Requirements
+      description: What must the system do?
+      placeholder: |
+        - REQ-1: System shall...
+        - REQ-2: System shall...
+    validations:
+      required: true
+
+  - type: textarea
+    id: design
+    attributes:
+      label: Design / Architecture
+      description: How will this be implemented? (technical approach, diagrams, etc.)
+      placeholder: |
+        - Database schema changes
+        - API endpoints
+        - UI wireframes (attach or link)
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How will we verify this spec was implemented correctly?
+      placeholder: |
+        - [ ] All functional requirements met
+        - [ ] Tests pass with ≥80% coverage
+        - [ ] Documentation complete
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & Dependencies
+      description: What could go wrong? What do we depend on?
+      placeholder: |
+        - Risk: ...
+        - Dependency: ...
